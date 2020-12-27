@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<%- include('../partials/head'); %>
+	</head>
+	<body class="container">
+  <header><%- include('../partials/header'); %></header>
+    <main>
+        <div class="container pt-5">
+            <h1>Add a User</h1>
+            <p>Using the submit button we will send a POST request to the database and then display a success message. </p>
+         <div class="bg-light p-2 rounded border my-5">
+          <h2>Add Your User</h2>
+            <form id="comment-form" action="/create_employee" method="post">
+              <div class="mb-3">
+                <div class="mb-2">  <label for="input-firstName" class="form-label">First Name:</label>
+                  <input type="text" name="user[firstName]"></div>
+                <div class="mb-2">  <label for="input-lastName" class="form-label">Last Name:</label>
+                  <input type="text" name="user[lastName]"></div>
+                <div class="mb-2"><label for="input-email" class="form-label">Email:</label>
+                  <input type="text" name="user[email]"></div>
+                <div class="mb-2">   <label for="input-id" class="form-label">ID:</label>
+                  <input type="text" name="user[id]"></div>
+               <div class="mb-2"> <label for="input-picture" class="form-label">Picture:</label>
+                 <input type="text" name="user[picture]"></div>
+               <div class="mb-2"> <label for="input" class="form-label">Title:</label>
+                  <input type="text-title" name="user[title]"></div>
+                <input type="submit" value="Submit">
+            </form>
+         </div>
+        </div>
+    </main>
+    <footer><%- include('../partials/footer'); %></footer>
+</body>
+</html>

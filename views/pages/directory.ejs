@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+	<body class="container">
+		<header><%- include('../partials/header'); %></header>
+
+		<main>
+			<div class="container">
+				<h1>Top employees</h1>
+				<div class="container">
+					<p>
+						With a working GET request in Postman, you can now start to render
+						the response in HTML
+					</p>
+					<p>
+						Inside the "directory.ejs" page is a EJS version of a template
+						literal. With templates like EJS or Handlebars we can then loop over
+						the items of the array to render the HTML.
+          </p>
+          <p><ul>
+            <li>Starting with a working Postman request, inside your route console.log the response</li>
+            <li>Next you just need to pass the response object or array of objects into your template</li>
+          </ul> </p>
+          <p>The image below is just an example, remove it and render each employee like the example. Feel free to style it however you'd like! </p>
+          <p>Try mocking up some Bootstrap cards or columns with some hard coded data to get an idea of how your templates should look. </p>
+        </div>
+				<div class="row justify-content-between">
+		  <% employees.forEach(function(id) {
+			  %>
+			  <div class="col-3 p-1 m-2 bg-light">
+				  <img src="<%=id[1].picture %>" style="width:125px;height:125px;">
+				  <%= id[1].firstName %>
+				  <%= id[1].lastName %>
+				  <%= id[1].email %>
+				<br></br>
+				<a class="button" href="directory/<%= id[0]%>" role="button">Click Me!</a>
+				<a class="button" href="delete/<%= id[0]%>" role="button">Delete</a>
+				<!-- <a class="button" href="directory/<%= id[0]%>" role="button">Delete</a> -->
+				<a class="button" href="/update">Update</a>
+			  </div>
+			  <style>
+				.button {
+					background-color: #0066ff;
+					border-radius: 23px;
+					border: 1px solid #6b9cff;
+					display: inline;
+					cursor: pointer;
+					color: #ffffff;
+					font-family: Arial;
+					font-size: 7px;
+					padding: 15px 30px;
+					text-align: center;
+					text-decoration: none;
+				}
+				.button:hover {
+					background-color: #4ca3ff;
+				}
+				.button:active {
+					position: absolute;
+				}
+				</style>
+				
+			  <% }); %>
+
+		  <!-- YOUR EJS OR HANDLEBARS TEMPLATE LITERALS GO HERE -->
+
+           <!-- Try mocking up some Bootstrap cards or columns with some hard coded data to get an idea of how your templates should look. -->
+				</div>
+			</div>
+		</main>
+
+		<footer><%- include('../partials/footer'); %></footer>
+	</body>
+</html>
