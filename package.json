@@ -14,6 +14,6 @@
   "description": "Clone the repo and run \"npm install\". Then open your browser to port 2001 to get started.",
   "version": "1.0.0",
   "devDependencies": {},
-  "author": "",
+  "author": "Kenneth Luster",
   "license": "ISC"
 }

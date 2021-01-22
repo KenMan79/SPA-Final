@@ -51,7 +51,7 @@ app.post("/create_employee", function (req, res) {
 
 		var config = {
 			method: 'post',
-			url: 'https://spa-lab-ii-default-rtdb.firebaseio.com/data.json',
+			url: 'https://spa-project-lab-default-rtdb.firebaseio.com/data.json',
 			headers: { 
 				"Content-Type": "text/plain"
 			},
@@ -90,7 +90,7 @@ app.get("/directory", function (req, res) {
 
 	var config = {
 	method: 'get',
-	url: 'https://spa-lab-ii-default-rtdb.firebaseio.com/.json',
+	url: 'https://spa-project-lab-default-rtdb.firebaseio.com/.json',
 	headers: { }
 	};
 
@@ -124,7 +124,7 @@ app.get("/directory/:uid", function (req, res) {
 
 	var config = {
 		method: 'get',
-		url: `https://spa-lab-ii-default-rtdb.firebaseio.com/data/${id}.json`,
+		url: `https://spa-project-lab-default-rtdb.firebaseio.com//data/${id}.json`,
 		headers: { }
 	  };
 	  
@@ -155,7 +155,7 @@ app.get("/delete/:uid", function (req, res) {
 
 		var config = {
 			method: 'delete',
-			url: `https://spa-lab-ii-default-rtdb.firebaseio.com/data/${id}.json`,
+			url: `https://spa-project-lab-default-rtdb.firebaseio.com/data/${id}.json`,
 			headers: { }
 		  };
 		  
@@ -189,7 +189,7 @@ app.post("/update", function(req, res) {
 
 	var config = {
 		method: 'patch',
-		url: `https://spa-lab-ii-default-rtdb.firebaseio.com/data/${id}.json`,
+		url: `https://spa-project-lab-default-rtdb.firebaseio.com/data/${id}.json`,
 		headers: { 
 			"Content-Type": "text/plain"
 		},
@@ -217,7 +217,7 @@ app.get("/update/:uid", function (req, res) {
 	
 	var config = {
 		method: 'get',
-		url: `https://spa-lab-ii-default-rtdb.firebaseio.com/data/${id}.json`,
+		url: `https://spa-project-lab-default-rtdb.firebaseio.com/data/${id}.json`,
 		headers: { }
 	  };
 	  axios(config)
